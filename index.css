@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: hwb(90 67% 32% / 0.81);
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+}
+
+.logo img {
+    width: 60px;
+    border-radius: 100%;
+}
+
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #007bff;
+}
+
+/* Search Bar */
+.searchBar {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    margin-right: 1rem;
+}
+
+.searchBar input {
+    width: 300px;
+    padding: 8px 40px 8px 15px;
+    border: none;
+    outline: none;
+    background-color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.searchBar input:focus {
+    width: 300px;
+}
+
+.searchBar i {
+    position: absolute;
+    right: 8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    cursor: pointer;
+    color: black;
+}
+
+/* Icons for Desktop */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.5rem;
+    margin-right: 5rem;
+}
+
+.icons i {
+    transition: color 0.3s;
+    color: black;
+}
+
+.icons a:hover i {
+    color: #007bff;
+}
+
+/* Sidebar for Mobile */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: hwb(90 67% 32% / 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #007bff;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+.mobile-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+@media (max-width: 768px) {
+
+    .menu {
+        display: none;
+    }
+
+
+    .mobile-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .icons {
+        font-size: 1.2rem;
+        margin-right: 0;
+    }
+
+    .searchBar i {
+        display: none;
+    }
+
+    .searchBar input {
+        width: 100%;
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100vh - 80px);
+    position: relative;
+    overflow: hidden;
+}
+
+.main img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center top;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -4;
+}
+
+.mainText {
+    z-index: 1;
+    color: white;
+    margin-left: 50px;
+}
+
+.mainText h2 {
+    font-size: 1.9rem;
+    color: black;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.mainText p {
+    margin-top: 22px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.mainText button {
+    width: 140px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    border: none;
+    margin-top: 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mainText button:hover {
+    border: 3px solid black;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+
+.head {
+    text-align: center;
+    padding: 3rem;
+
+}
+
+.WomenCard {
+    display: flex;
+    justify-content: center;
+
+}
+
+.menCard {
+    display: flex;
+    justify-content: center;
+
+}
+
+.card {
+    width: 300px;
+    background-color: #fff;
+    margin-inline: 22px;
+    margin-top: 24px;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+}
+
+.card img:hover {
+    height: 310px;
+    box-shadow: 10px 5px 5px black;
+    cursor: pointer;
+
+}
+
+@media only screen and (max-width: 475px) {
+    .slides {
+        width: auto !important;
+    }
+
+    .searchBar input {
+        width: auto;
+
+    }
+
+    input {
+        width: auto;
+        display: none;
+    }
+
+    ul {
+        display: none;
+    }
+
+    .footer {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
+.card p {
+    padding: 8px;
+}
+
+.slides {
+    width: 1200px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+.slides .slideCard {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    text-align: center;
+    transition: all 1s ease;
+
+}
+
+.slideCard img {
+    margin-inline: 20px;
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+}
+
+.blogs {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+}
+
+.blogCard {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    background-color: rgba(7, 7, 7, 0.637);
+    color: white;
+    padding: 12px;
+}
+
+.blogCard img {
+    width: 250px;
+
+}
+
+.blogCard p {
+    margin-top: 22px;
+}
+
+.blogCard a {
+    padding: 5px 13px;
+    background-color: rgb(0, 153, 255);
+    position: relative;
+    top: 22px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 66px;
+    margin-top: 66px;
+    background-color: #cddcdf;
+    flex-wrap: wrap;
+
+}
+
+.text p {
+    margin-top: 12px;
+}
+
+.cardDetail {
+    display: flex;
+    padding: 33px;
+    gap: 22px;
+}
+
+.cardDetail img {
+    width: 400px;
+}
+
+.cardDetail p {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.cardDetail h3 {
+    margin-top: 32px;
+}
+
+.cardDetail button {
+    width: 140px;
+    height: 40px;
+    background-color: rgb(255, 145, 0);
+    color: white;
+    font-size: 20px;
+    border: none;
+    margin-top: 33px;
+    cursor: pointer;
+}
+
+.detailText {
+    font-size: 20px;
+    margin-top: 33px;
+}
+
+.detailText i {
+    color: orange;
+    font-size: 22px;
+    margin-top: 22px;
+}
+
+.detailText a {
+    padding: 8px 22px;
+    background-color: rgb(250, 29, 66);
+    color: white;
+    text-decoration: none;
+}
+
+.lastone {
+    height: 30px;
+    padding-top: 20px;
+    color: black;
+    width: 100%;
+    background-color: mintcream;
+
+
+}
+
+.text a {
+    text-decoration: none;
+    color: black;
+    padding: 90px;
+}
+
+.heading {
+    text-align: center;
+    /* padding-left: 85px; */
+}
