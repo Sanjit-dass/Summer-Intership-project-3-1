@@ -17,59 +17,64 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="./photos/logo.jpg.jfif" alt="Logo">
-        </div>
+   <!-- Navbar -->
+<nav class="w-full flex items-center justify-between px-4 py-2 bg-white shadow-md">
+  
+  <!-- Logo -->
+  <div class="flex items-center">
+    <img src="./photos/logo.jpg.jfif" alt="Logo" class="h-10 w-10 object-cover rounded-full">
+  </div>
 
+  <!-- Menu -->
+  <ul class="hidden md:flex space-x-6 text-sm font-semibold">
+    <li><a href="#men" class="hover:text-blue-500">MEN</a></li>
+    <li><a href="#women" class="hover:text-blue-500">WOMEN</a></li>
+    <li><a href="#kids" class="hover:text-blue-500">KIDS</a></li>
+    <li><a href="#traditional" class="hover:text-blue-500">TRADITIONAL</a></li>
+    <li><a href="#slider" class="hover:text-blue-500">TRENDS</a></li>
+    <li><a href="#blog" class="hover:text-blue-500">BLOGS</a></li>
+  </ul>
 
-        <ul class="menu">
-            <li><a href="#men">MEN</a></li>
-            <li><a href="#women">WOMEN</a></li>
-            <li><a href="#kids">KIDS</a></li>
-            <li><a href="#traditional">TRADITIONAL</a></li>
-            <li><a href="#slider">TRENDS</a></li>
-            <li><a href="#blog">BLOGS</a></li>
-        </ul>
+  <!-- Search Bar -->
+  <div class="hidden md:flex items-center bg-gray-100 px-2 py-1 rounded-full">
+    <input type="text" id="searchInput" placeholder="Search..." class="bg-transparent outline-none px-2 text-sm">
+    <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+  </div>
 
+  <!-- Icons -->
+  <div class="flex items-center space-x-4 ml-4">
+    <a href="signup_form.html">
+      <i class="fa-regular fa-user text-xl"></i>
+    </a>
+    <i class="fa-regular fa-heart text-xl"></i>
+    <a href="#">
+      <i class="fa-solid fa-cart-shopping text-xl"></i>
+    </a>
+    
+    <!-- Hamburger (Mobile) -->
+    <button class="md:hidden" onclick="toggleSidebar()">
+      <i class="fas fa-bars text-xl"></i>
+    </button>
+  </div>
+</nav>
 
-        <div class="searchBar search-box">
-            <input type="text" id="searchInput" placeholder="Search..."> <!-- Smaller input -->
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-
-        <div class="mobile-icons">
-            <div class="icons">
-                <a href="signup_form.html">
-                    <i class="fa-regular fa-user"></i>
-                </a>
-                <i class="fa-regular fa-heart"></i>
-                <a href="#">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </a>
-            </div>
-            <!-- Hamburger Menu for Mobile -->
-            <div class="hamburger" onclick="toggleSidebar()">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
-
-
-    <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
-        <a href="#men">MEN</a>
-        <a href="#women">WOMEN</a>
-        <a href="#kids">KIDS</a>
-        <a href="#slider">TRENDS</a>
-        <a href="#traditional">TRADITIONAL</a>
-        <a href="#blog">BLOGS</a>
-    </div>
-
+<!-- Sidebar (for mobile) -->
+<div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
+  <button class="text-2xl p-4" onclick="toggleSidebar()">&times;</button>
+  <nav class="flex flex-col p-4 space-y-4 text-lg">
+    <a href="#men">MEN</a>
+    <a href="#women">WOMEN</a>
+    <a href="#kids">KIDS</a>
+    <a href="#slider">TRENDS</a>
+    <a href="#traditional">TRADITIONAL</a>
+    <a href="#blog">BLOGS</a>
+  </nav>
+</div>
 
     <div class="main">
         <img src="./photos/main1.jpg" alt="main_img.png">
