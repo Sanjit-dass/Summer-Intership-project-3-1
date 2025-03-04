@@ -17,67 +17,60 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
-     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
 <body>
-   <!-- Navbar -->
-<!-- Navbar -->
-<nav class="w-full flex items-center justify-between px-6 py-4 bg-white shadow-md">
+    <nav class="navbar sticky-top bg-light">
+        <div class="container-fluid">
+        <div class="logo">
+            <img src="./photos/logo.jpg.jfif" alt="Logo">
+        </div>
 
-  <!-- Logo -->
-  <div class="flex items-center">
-    <img src="./photos/logo.jpg.jfif" alt="Logo" class="h-12 w-12 object-cover rounded-full">
-  </div>
 
-  <!-- Menu -->
-  <ul class="hidden md:flex space-x-8 text-lg font-semibold text-gray-700">
-    <li><a href="#men" class="hover:text-blue-600 transition">MEN</a></li>
-    <li><a href="#women" class="hover:text-blue-600 transition">WOMEN</a></li>
-    <li><a href="#kids" class="hover:text-blue-600 transition">KIDS</a></li>
-    <li><a href="#traditional" class="hover:text-blue-600 transition">TRADITIONAL</a></li>
-    <li><a href="#slider" class="hover:text-blue-600 transition">TRENDS</a></li>
-    <li><a href="#blog" class="hover:text-blue-600 transition">BLOGS</a></li>
-  </ul>
+        <ul class="menu">
+            <li><a href="#men">MEN</a></li>
+            <li><a href="#women">WOMEN</a></li>
+            <li><a href="#kids">KIDS</a></li>
+            <li><a href="#traditional">TRADITIONAL</a></li>
+            <li><a href="#slider">TRENDS</a></li>
+            <li><a href="#blog">BLOGS</a></li>
+        </ul>
 
-  <!-- Search Bar -->
-  <div class="hidden lg:flex items-center bg-gray-100 px-4 py-2 rounded-full shadow-sm">
-    <input type="text" id="searchInput" placeholder="Search..." class="bg-transparent outline-none px-2 text-base w-40 placeholder-gray-500">
-    <i class="fa-solid fa-magnifying-glass text-gray-600 text-lg ml-2"></i>
-  </div>
 
-  <!-- Icons -->
-  <div class="flex items-center space-x-6 ml-4 text-gray-700">
-    <a href="signup_form.html" class="hover:text-blue-600 transition">
-      <i class="fa-regular fa-user text-2xl"></i>
-    </a>
-    <a href="#" class="hover:text-red-500 transition">
-      <i class="fa-regular fa-heart text-2xl"></i>
-    </a>
-    <a href="#" class="hover:text-green-600 transition">
-      <i class="fa-solid fa-cart-shopping text-2xl"></i>
-    </a>
+        <div class="searchBar search-box">
+            <input type="text" id="searchInput" placeholder="Search..."> <!-- Smaller input -->
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
 
-    <!-- Hamburger (Mobile) -->
-    <button class="md:hidden" onclick="toggleSidebar()">
-      <i class="fas fa-bars text-2xl"></i>
-    </button>
-  </div>
-</nav>
+        <div class="mobile-icons">
+            <div class="icons">
+                <a href="signup_form.html">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+                <i class="fa-regular fa-heart"></i>
+                <a href="#">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+            <!-- Hamburger Menu for Mobile -->
+            <div class="hamburger" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        </div>
+    </nav>
 
-<!-- Sidebar (Mobile) -->
-<div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
-  <button class="text-3xl p-4" onclick="toggleSidebar()">&times;</button>
-  <nav class="flex flex-col p-6 space-y-6 text-xl font-semibold">
-    <a href="#men" class="hover:text-blue-600">MEN</a>
-    <a href="#women" class="hover:text-blue-600">WOMEN</a>
-    <a href="#kids" class="hover:text-blue-600">KIDS</a>
-    <a href="#slider" class="hover:text-blue-600">TRENDS</a>
-    <a href="#traditional" class="hover:text-blue-600">TRADITIONAL</a>
-    <a href="#blog" class="hover:text-blue-600">BLOGS</a>
-  </nav>
-</div>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+        <a href="#men">MEN</a>
+        <a href="#women">WOMEN</a>
+        <a href="#kids">KIDS</a>
+        <a href="#slider">TRENDS</a>
+        <a href="#traditional">TRADITIONAL</a>
+        <a href="#blog">BLOGS</a>
+    </div>
 
 
     <div class="main">
